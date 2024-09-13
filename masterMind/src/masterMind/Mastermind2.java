@@ -18,6 +18,8 @@ public class Mastermind2 {
 		int codeCrackerRij1Vak3; 
 		int codeCrackerRij1Vak4;
 		
+		
+		
 		int codeCrackerRij2Vak1; 
 		int codeCrackerRij2Vak2; 
 		int codeCrackerRij2Vak3; 
@@ -37,6 +39,14 @@ public class Mastermind2 {
 		int codeCrackerRij5Vak2;
 		int codeCrackerRij5Vak3;
 		int codeCrackerRij5Vak4;
+		
+		int codeCrackerRij6Vak1;
+		int codeCrackerRij6Vak2;
+		int codeCrackerRij6Vak3;
+		int codeCrackerRij6Vak4;
+		
+		
+		
 		// TODO Auto-generated method stub
 
 	}
