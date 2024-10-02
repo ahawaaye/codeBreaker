@@ -20,6 +20,15 @@ class Input03 {
         
        sc.close();
         
+     
+       
+       int x = 3;
+       
+       double y1= 3.0;
+       
+       System.out.println(x==y1);
+       
+       
         
         
         
