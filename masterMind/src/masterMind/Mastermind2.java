@@ -24,7 +24,7 @@ public class Mastermind2 {
 		int codeMakerantwoordrijvak4 = roodPin;
 
 		for (int poging = 1; poging <= 10; poging++) {
-			System.out.println("poging" + poging);
+			System.out.println("poging"+' ' + poging);
 			int codeCrackerRij1Vak1 = sc.nextInt();
 			int codeCrackerRij1Vak2 = sc.nextInt();
 			int codeCrackerRij1Vak3 = sc.nextInt();
@@ -93,20 +93,16 @@ public class Mastermind2 {
 			
 			//alles 
 			
-			if (codeCrackerRij1Vak1 == witPin ||
-				codeCrackerRij1Vak2 == witPin ||
-				codeCrackerRij1Vak3 == witPin ||
-				codeCrackerRij1Vak4 == witPin) {
+			if (codeMakerRij1Vak1 == witPin &&
+				codeMakerRij1Vak2 == witPin &&
+				codeMakerRij1Vak3 == witPin &&
+				codeMakerRij1Vak4 == witPin) {
 				
 				System.out.println("je hebt gewonnen!!!!!!");
-				break;
+				break;						
 				
-				
-				
-			} else if  (codeCrackerRij1Vak1 == zwartPin ||
-					codeCrackerRij1Vak2 == zwartPin||
-					codeCrackerRij1Vak3 == zwartPin||
-					codeCrackerRij1Vak4 == zwartPin) {
+			}  
+			if   (poging==10) {
 				System.out.println("helaas je hebt niet gewonnen");
 			}
 			
