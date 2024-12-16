@@ -8,20 +8,27 @@ public class Mastermind2 {
 
 		Scanner sc = new Scanner(System.in);
 
-		int roodPin = 1;
-		int oranjePin = 2;
-		int geelPin = 3;
-		int blauwPin = 4;
-		int paarsPin = 5;
-		int groenPin = 6;
-		int zwartPin = 7;
-		int witPin = 8;
-		int niksPin = 9;
+//		int roodPin = 1;
+//		int oranjePin = 2;
+//		int geelPin = 3;
+//		int blauwPin = 4;
+//		int paarsPin = 5;
+//		int groenPin = 6
 
-		int codeMakerantwoordrijvak1 = paarsPin;
-		int codeMakerantwoordrijvak2 = oranjePin;
-		int codeMakerantwoordrijvak3 = groenPin;
-		int codeMakerantwoordrijvak4 = roodPin;
+		int [] pins = {1,2,3,4,5,6};
+		int [] pinsCodeMaker = {7,8,9};
+		
+//		int zwartPin = 7;
+//		int witPin = 8;
+//		int niksPin = 9;
+
+//		int codeMakerantwoordrijvak1 = paarsPin;
+//		int codeMakerantwoordrijvak2 = oranjePin;
+//		int codeMakerantwoordrijvak3 = groenPin;
+//		int codeMakerantwoordrijvak4 = roodPin;
+		
+		int[] antwoordVak1 = {pins[4],pins[1],pins[5],pins[0]};
+		
 
 		for (int poging = 1; poging <= 10; poging++) {
 			System.out.println("poging"+' ' + poging);
@@ -30,20 +37,21 @@ public class Mastermind2 {
 			int codeCrackerRij1Vak3 = sc.nextInt();
 			int codeCrackerRij1Vak4 = sc.nextInt();
 
-			int codeMakerRij1Vak1 = niksPin; 
-			int codeMakerRij1Vak2 = niksPin;
-			int codeMakerRij1Vak3 = niksPin; 
-			int codeMakerRij1Vak4 = niksPin; 
+			int codeMakerRij1Vak1 = 9; 
+			int codeMakerRij1Vak2 = 9;
+			int codeMakerRij1Vak3 = 9; 
+			int codeMakerRij1Vak4 = 9; 
+			
 
 			//start corrective vak1
-			if (codeCrackerRij1Vak1 == codeMakerantwoordrijvak1) {
+			if (codeCrackerRij1Vak1 == antwoordVak1[0] ) {
 
-				codeMakerRij1Vak1 = witPin;
+				codeMakerRij1Vak1 = ;
 				System.out.println("vak1: juist (witPin)");
 				
-			} else if (codeCrackerRij1Vak1 == codeMakerantwoordrijvak2 ||
-                       codeCrackerRij1Vak1 == codeMakerantwoordrijvak3 ||
-                      codeCrackerRij1Vak1 == codeMakerantwoordrijvak4) {
+			} else if (codeCrackerRij1Vak1 == codeMakerantwoordrijvak1 ||
+                       codeCrackerRij1Vak1 == codeMakerantwoordrijvak2 ||
+                      codeCrackerRij1Vak1 == codeMakerantwoordrijvak3) {
 				
 			codeMakerRij1Vak1 = zwartPin;
 			System.out.println("vak1: juiste kleur, verkeerde vak (zwartPin) ");

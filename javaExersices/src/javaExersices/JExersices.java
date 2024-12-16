@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class JExersices {
 
      public static void main(String[] args) {
+    	 
+    	 Scanner sc = new Scanner(System.in);
 //		
 //		System.out.println("hello");
 //		System.out.println("Hawa Ahmed");
@@ -33,36 +35,50 @@ public class JExersices {
 //	   int nummer2 = 9;
 //	   int sumB = (nummer1+nummer2)%nummer2;
 //	   System.out.println(sumB);
-   
-	   int number1 = 20;
-	   int number2 = -3;
-	   int number3 = 5;
-	   int number4 = 8;
-	   int sumC = number1+number2*number3/number4;
-	   System.out.println(sumC);
-	   
-	   int numd1 = 5;
-	   int numd2 = 15;
-	   int numd3 = 3;
-	   int numd4 = 2;
-	   int numd5 = 8;
-	   int sumD = numd1+numd2/numd3*numd4-numd5%numd3;
-	   System.out.println(sumD);
-	   
-			   
-	    Scanner scanner = new Scanner(System.in);
-	    
-	    		 System.out.print("Input first number: ");
-        int num1b = scanner.nextInt();
+ 
+    	 
+    	 // java exercise opdracht 32
+    	 
 
-        System.out.print("Input second number: ");
-        int num2b = scanner.nextInt();
-
-       
-        int product = num1b * num2b;
-
-        System.out.println(num1b + " x " + num2b + " = " + product);
-	    		
-	}
-
-}
+    	int num1 =  sc.nextInt();
+    	System.out.println("eerste nummer");
+    	
+    	int num2 = sc.nextInt();
+    	System.out.println("eerste nummer");
+    	
+    	if(num1 == num2) {
+    		System.out.println(num1 +"!=" + num2);
+    	}
+           if (num1 < num2 ){
+        	   System.out.println(num1 +"<" + num2);
+    	}
+           if(num1 <= num2) {
+        	   System.out.println(num1 +"<=" + num2);
+           }
+     
+           
+         // opdracht 33
+           
+           String userInput = sc.next();
+           String digits =" ";
+      
+           String[]myArray=userInput.split(digits);
+           int a = Integer.parseInt(myArray[0]);    
+           int b = Integer.parseInt(myArray[1]);
+            System.out.println(a + b );  
+            
+            
+            // opdracht 35
+            
+            double polygon = 7;
+            double side =6;
+            double result= (polygon*side*side)/(4*tan(PI/polygon));
+            System.out.println("the area is"+result);
+    	 
+            
+            
+            
+            
+            
+            
+}}

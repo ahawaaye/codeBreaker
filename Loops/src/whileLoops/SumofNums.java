@@ -18,7 +18,7 @@ public class SumofNums {
         int number = console.nextInt();
 sum+=number;
         while (sum2 != 0) {
-            sum = sum + number;     // moved to top of loop
+            sum = sum + number;     
             System.out.print("Enter a number (-1 to quit): ");
             number = console.nextInt();
             sum2--;
