@@ -3,7 +3,7 @@ package functions;
 import java.util.Scanner;
 
 public class Temperatuur {
-	public double  FahrenheitToCelcius( double Celsius1, double Fahrenheit1 ) {
+	public double  FahrenheitToCelcius( double Celsius1) {
 		 
 
 		return  (Celsius1*1.8)+32;
