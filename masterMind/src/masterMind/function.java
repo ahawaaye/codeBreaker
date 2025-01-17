@@ -20,21 +20,16 @@ public class function {
 
 	}
 
-public  int poging () {
-	
-	
-	for (int poging1 = 1; poging1 <= 10; poging1++) {
-		System.out.println("poging" + ' ' + poging1);
-	
-	
-	return 0;
-	
-	
-	
-	
+	public int poging() {
+
+		for (int poging1 = 1; poging1 <= 10; poging1++) {
+			System.out.println("poging" + ' ' + poging1);
+
+			return poging1;
+
+		}
+		return 0;
+
+	}
 	
 }
-
-}
-
-

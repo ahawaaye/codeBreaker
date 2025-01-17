@@ -15,82 +15,43 @@ public class Mastermind2 {
 
 		int[] antwoordVak1 = fn.CodeGenereren();
 
-		for (int poging = 1; poging <= 10; poging++) {
-			System.out.println("poging" + ' ' + poging);
-			int[] codeCrackerRijvakken = { sc.nextInt(), sc.nextInt(), sc.nextInt(), sc.nextInt() };
 
-			int codeMakerRij1Vak1 = 9;
-			int codeMakerRij1Vak2 = 9;
-			int codeMakerRij1Vak3 = 9;
-			int codeMakerRij1Vak4 = 9;
+		int[] codeMakerRijen1 = { 9, 9, 9, 9 };
 
+		for (int poging1 = 1; poging1 <= 10; poging1++ ) {
+			int[] codeCrackerRijvakken1 = fn.userInput();
+			System.out.println("poging" + ' ' + poging1);
 			// start corrective vak1
-			if (codeCrackerRijvakken[0] == antwoordVak1[0]) {
+			
+			String feedback = "Geen";
 
-				codeMakerRij1Vak1 = antwoordVak1[1];
-				System.out.println("vak1: juist (witPin)");
+			for (int i = 0; i < antwoordVak1.length; i++) {
+				if (antwoordVak1[i] == codeCrackerRijvakken1[i]) {
+					feedback = "wit";
+				} else {
+					for (int j = 0; j < antwoordVak1.length; j++) {
+						if (antwoordVak1[j] == codeCrackerRijvakken1[j] && i != j) {
+							feedback = "zwart";
 
-			} else if (codeCrackerRijvakken[0] == antwoordVak1[1] || codeCrackerRijvakken[0] == antwoordVak1[2]
-					|| codeCrackerRijvakken[0] == antwoordVak1[3]) {
-
-				codeMakerRij1Vak1 = pinsCodeMaker[2];
-				System.out.println("vak1: juiste kleur, verkeerde vak (zwartPin) ");
-			} else {
-				System.out.println("vak1: fout");
+						}
+					}
+				}
 			}
-
-			// vak2
-			if (codeCrackerRijvakken[1] == antwoordVak1[1]) {
-				codeMakerRij1Vak2 = pinsCodeMaker[2];
-				System.out.println("vak2: juist (witPin)");
-			} else if (codeCrackerRijvakken[1] == antwoordVak1[0] || codeCrackerRijvakken[1] == antwoordVak1[2]
-					|| codeCrackerRijvakken[1] == antwoordVak1[3]) {
-				codeMakerRij1Vak2 = pinsCodeMaker[0];
-				System.out.println("vak2: jusite kleur, verkeerde vak (zwartPin)");
-			} else {
-				System.out.println("vak2: fout");
-			}
-
-			// vak 3
-			if (codeCrackerRijvakken[2] == antwoordVak1[2]) {
-				codeMakerRij1Vak3 = pinsCodeMaker[2];
-				System.out.println("vak3: juist (witPin)");
-			} else if (codeCrackerRijvakken[2] == antwoordVak1[0] || codeCrackerRijvakken[2] == antwoordVak1[1]
-					|| codeCrackerRijvakken[2] == antwoordVak1[3]) {
-				codeMakerRij1Vak2 = pinsCodeMaker[0];
-				System.out.println("vak3: jusite kleur, verkeerde vak (zwartPin)");
-			} else {
-				System.out.println("vak3: fout");
-			}
-
-			// vak4
-
-			if (codeCrackerRijvakken[3] == antwoordVak1[3]) {
-				codeMakerRij1Vak4 = pinsCodeMaker[2];
-				System.out.println("vak4: juist (witPin)");
-			} else if (codeCrackerRijvakken[3] == antwoordVak1[0] || codeCrackerRijvakken[3] == antwoordVak1[1]
-					|| codeCrackerRijvakken[3] == antwoordVak1[2]) {
-				codeMakerRij1Vak2 = pinsCodeMaker[0];
-				System.out.println("vak4: jusite kleur, verkeerde vak (zwartPin)");
-			} else {
-				System.out.println("vak4: fout");
-			}
-
 			// alles
 
-			if (codeMakerRij1Vak1 == pinsCodeMaker[2] && codeMakerRij1Vak2 == pinsCodeMaker[2]
-					&& codeMakerRij1Vak3 == pinsCodeMaker[2] && codeMakerRij1Vak4 == pinsCodeMaker[2]) {
+			if (antwoordVak1[0] == codeCrackerRijvakken1[0] && antwoordVak1[1] == codeCrackerRijvakken1[1]
+					&& antwoordVak1[2] ==codeCrackerRijvakken1[2] && antwoordVak1[3] == codeCrackerRijvakken1[3]) {
 
 				System.out.println("je hebt gewonnen!!!!!!");
 				break;
 
 			}
-			if (poging == 10) {
+			if (poging1 == 10) 
 				System.out.println("helaas je hebt niet gewonnen");
 			}
 
 			// TODO Auto-generated method stub
 
 		}
-	}
+	
 }
