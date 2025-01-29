@@ -17,8 +17,7 @@ public class AgeValidity {
     	
    Scanner sc = new Scanner (System.in);
    
-        int age  = sc.nextInt();
-        
+        int age  =        
         Boolean drivingUnderAge = false;
         
         drivingUnderAge = age <=18;
