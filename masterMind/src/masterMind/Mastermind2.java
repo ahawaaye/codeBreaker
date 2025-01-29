@@ -29,7 +29,6 @@ public class Mastermind2 {
 				System.out.println(feedbackString);
 			}
 
-			// alles
 
 			boolean winning = fn.winning(antwoordVak1, codeCrackerRijvakken1);
 
@@ -41,8 +40,6 @@ public class Mastermind2 {
 			if (poging1 == 10)
 				System.out.println("helaas je hebt niet gewonnen");
 		}
-
-		// TODO Auto-generated method stub
 
 	}
 
